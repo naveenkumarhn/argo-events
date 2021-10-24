@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- rbac.yaml
+- github.com/argoproj/argo-events/manifests/base?ref=b44128a26397f812ef43b60396d19c03d2f758de
+- event-bus.yaml
+namespace: argo-events
+
