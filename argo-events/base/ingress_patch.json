@@ -2,6 +2,6 @@
   {
     "op": "replace",
     "path": "/spec/rules/0/host",
-    "value": "acme.com"
+    "value": "events.sds.local"
   }
 ]

@@ -10,14 +10,14 @@ spec:
     - port: 12000
       targetPort: 12000
   github:
-    argo-combined-app:
-      owner: vfarcic
-      repository: argo-combined-app
+    argo-events:
+      owner: naveenkumarhn
+      repository: argo-events
       webhook:
-        endpoint: /argo-combined-app
+        endpoint: /argo-events
         port: "12000"
         method: POST
-        url: http://acme.com
+        url: http://events.sds.local
       events:
         - "*"
       apiToken:
@@ -48,4 +48,4 @@ spec:
            name: github-eventsource-svc
            port:
              number: 12000
-    host: acme.com
+    host: events.sds.local

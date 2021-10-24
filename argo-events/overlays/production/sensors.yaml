@@ -10,7 +10,7 @@ spec:
   dependencies:
   - name: github
     eventSourceName: github
-    eventName: argo-combined-app
+    eventName: argo-events
   triggers:
   - template:
       name: trigger
@@ -24,7 +24,7 @@ spec:
             apiVersion: argoproj.io/v1alpha1
             kind: Workflow
             metadata:
-              generateName: argo-combined-app-
+              generateName: argo-events-
               namespace: workflows
             spec:
               entrypoint: build
@@ -79,7 +79,7 @@ spec:
                       - name: repo_owner
                         value: 
                       - name: repo_name
-                        value: argo-combined-demo
+                        value: argo-events
                       - name: image_owner
                         value: 
                       - name: image_name
@@ -100,7 +100,7 @@ spec:
                       - name: repo_owner
                         value: 
                       - name: repo_name
-                        value: argo-combined-demo
+                        value: argo-events
                       - name: image_owner
                         value: 
                       - name: image_name
